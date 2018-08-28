@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-12 tweet">
+    <%= link_to('<span class="glyphicon glyphicon-edit"></span> Edit'.html_safe, edit_tweet_path(resource), class: "edit-tweet")%>
+    <%= link_to(
+      '<span class="glyphicon glyphicon-remove"></span>'.html_safe,
+      tweet_path(resource),
+      method: 'delete',
+      class: "delete-tweet",
+      data: { confirm: "Are you sure?" }
+    )%>
+    <div class="message"><%= resource.message%></div>
+    <em class="author">Created by: <%= resource.owner.email%> <%= time_ago_in_words(resource.created_at) %> ago</em>
+  </div>
+</div>

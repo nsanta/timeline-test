@@ -25,3 +25,14 @@ regular_user =  User.new({
 
 regular_user.save
 ap "Created non Admin user with email: #{regular_user_email} and password: #{password} "
+
+
+# Tweet seeds
+
+tweet_message =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua "
+
+20.times do |t|
+  Tweet.create!(message: tweet_message + t.to_s, owner: admin)
+  Tweet.create!(message: tweet_message + t.to_s, owner: regular_user)
+end

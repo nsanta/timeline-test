@@ -1,0 +1,14 @@
+<h1>Tweets Timeline</h1>
+<div class="row">
+  <%= paginate @resources %>
+</div>
+<div class="row">
+  <div class="col-xs-6 offset-3">
+    <% @resources.each do |resource| %>
+      <%= render 'tweet', resource: resource %>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <%= paginate @resources %>
+</div>

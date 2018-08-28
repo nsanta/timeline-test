@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_232436) do
+ActiveRecord::Schema.define(version: 2018_08_28_001607) do
+
+  create_table "tweets", force: :cascade do |t|
+    t.string "message", default: "", null: false
+    t.integer "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_tweets_on_created_at"
+    t.index ["owner_id"], name: "index_tweets_on_owner_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

@@ -1,0 +1,28 @@
+.tweet {
+  border: 1px black solid;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 10px;
+
+  .message {
+    font-size: 20px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .author {
+    color: #888;
+    background: #ccc;
+  }
+  .edit-tweet {
+    position: absolute;
+    left: 20px;
+  }
+
+  .delete-tweet {
+    position: absolute;
+    right: 20px;
+    color: #990000;
+  }
+}
+
